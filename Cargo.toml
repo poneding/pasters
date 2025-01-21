@@ -1,0 +1,13 @@
+[package]
+name = "pasters"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+egui_plot = "0.30.0"
+egui_extras = { version = "0.30.0", features = ["default"] }
+egui = { version = "0.30.0", default-features = false, features = [
+    "color-hex",
+] }
+arboard = "3.4.1"
+eframe = { version = "0.30.0", features = ["default"] }
