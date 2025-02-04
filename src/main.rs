@@ -1,15 +1,14 @@
 use app::Pasters;
 use core::time;
-use eframe::{run_native, App, CreationContext, NativeOptions};
+use eframe::{run_native, CreationContext, NativeOptions};
 use egui::{
     epaint::text::{FontInsert, FontPriority, InsertFontFamily},
-    FontData, FontFamily, ViewportBuilder, ViewportCommand,
+    FontData, FontFamily, ViewportBuilder,
 };
 use global_hotkey::{hotkey::HotKey, GlobalHotKeyEvent, GlobalHotKeyManager, HotKeyState};
 use keyboard_types::{Code, Modifiers};
 use std::{
-    error::Error,
-    sync::mpsc::{self, Receiver},
+    sync::mpsc::{self},
     thread,
 };
 

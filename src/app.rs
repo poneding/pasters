@@ -1,4 +1,3 @@
-use core::time;
 use std::{
     collections::VecDeque,
     sync::{mpsc, Arc, Mutex},
@@ -6,12 +5,8 @@ use std::{
 };
 
 use eframe::App;
-use egui::{
-    CentralPanel, ScrollArea, Sense, TextStyle, ViewportBuilder, ViewportCommand, ViewportId,
-    WindowLevel,
-};
+use egui::{CentralPanel, ScrollArea, Sense, TextStyle, ViewportCommand};
 use egui_extras::{Column, Size, StripBuilder, TableBuilder};
-use global_hotkey::{hotkey, GlobalHotKeyEvent, GlobalHotKeyEventReceiver, HotKeyState};
 
 use crate::clipboard;
 
@@ -41,16 +36,14 @@ impl Pasters {
             }
         });
 
-        let instance = Self {
+        Self {
             history: VecDeque::new(),
             selected_index: 0,
             visiable: Arc::new(Mutex::new(true)),
             allowed_to_close: false,
             show_confirmation_dialog: false,
             clipboard_rx,
-        };
-
-        instance
+        }
     }
 }
 
