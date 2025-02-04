@@ -11,3 +11,7 @@ egui = { version = "0.30.0", default-features = false, features = [
 ] }
 arboard = "3.4.1"
 eframe = { version = "0.30.0", features = ["default"] }
+clipboard = "0.5.0"
+global-hotkey = "0.6.3"
+shortcutd = "0.2.0"
+keyboard-types = "0.7.0"
