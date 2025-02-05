@@ -2,6 +2,11 @@
 name = "pasters"
 version = "0.1.0"
 edition = "2021"
+authors = ["Pone Ding <poneding@gmail.com>"]
+description = "pasters is a clipboard manager with a GUI."
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+keywords = ["pasters"]
 
 [dependencies]
 egui_plot = "0.30.0"
